@@ -24,12 +24,17 @@ rxService.$inject = [];
 
 function rxService() {
 	var service = this;
+	var socket = io();
 
 	service.saveZones = saveZones;
 
 	function saveZones() {
-		console.log("saving zones");
+		socket.emit("save-zones");
 	}
+
+	socket.on("new-zones", function(data) {
+		console.log("new zones!");
+	})
 
 
 }

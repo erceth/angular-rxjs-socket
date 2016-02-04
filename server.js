@@ -5,16 +5,10 @@ var io = require('socket.io')(http);
 
 app.use(express.static('build'));
 
-var server = app.listen(2998, function() {
-    var host = server.address().address;
-    var port = server.address().port;
-
-    console.log('Example app listening at http://%s:%s', host, port);
-});
-
 io.on("connection", function(socket) {
 	
 	console.log("user connected");
+	socket.emit("init", {asdf:"asdf"});
 	
 	socket.on("save-zones", function(data) {
 		setTimeout(function() {
@@ -28,3 +22,9 @@ io.on("connection", function(socket) {
 
 });
 
+var server = http.listen(2998, function() {
+    var host = server.address().address;
+    var port = server.address().port;
+
+    console.log('Example app listening at http://%s:%s', host, port);
+});
