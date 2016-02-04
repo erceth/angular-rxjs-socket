@@ -1,0 +1,23 @@
+{
+  "name": "rxjs-socket-angular",
+  "version": "1.0.0",
+  "description": "Chess game using knockout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eric Ethington",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^2.2.0",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-inject": "^3.0.0",
+    "http": "0.0.0",
+    "run-sequence": "^1.1.5",
+    "socket.io": "^1.4.5"
+  },
+  "devDependencies": {
+    "run-sequence": "^1.1.5"
+  }
+}

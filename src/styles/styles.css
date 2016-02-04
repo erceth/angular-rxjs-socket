@@ -1,0 +1,67 @@
+.board {
+    width: 500px;
+    margin: auto;
+}
+
+.square {
+    height: 55px;
+    width: 55px;
+    display: inline-block;
+}
+
+.row:nth-child(even) .square:nth-child(odd) {
+    background-color: #999;
+    color: #fff;
+}
+
+.row:nth-child(even) .square:nth-child(even) {
+    background-color: white;
+}
+
+.row:nth-child(odd) .square:nth-child(odd) {
+    background-color: white;
+}
+
+.row:nth-child(odd) .square:nth-child(even) {
+    background-color: #999;
+    color: #fff;
+}
+
+.square.highlight {
+	box-shadow: 0px 0px 12px red inset;
+}
+
+/*** Pieces ***/
+.pawn, .knight, .bishop, .rook, .queen, .king {
+	background-size: 579% 189%;
+	background-image: url("../img/pieces_sprite.png");
+}
+
+.white {
+	background-position-y: 1px;
+}
+
+.black {
+	background-position-y: 54px;
+}
+
+.pawn {
+	background-position-x: 54px;
+}
+.knight {
+	background-position-x: 160px;
+}
+.bishop {
+	background-position-x: 215px;
+}
+.rook {
+	background-position-x: 108px;
+}
+.queen {
+	background-position-x: 267px;
+}
+.king {
+	background-position-x: 322px;
+}
+
+
