@@ -7,10 +7,10 @@ mainController.$inject = ["rxService", "rx"];
 function mainController(rxService, rx) {
 	var vm = this;
 
-	vm.saveZones = saveZone;
+	vm.saveZones = saveZones;
 
-	function saveZone() {
-		console.log("controller saving zone")
+	function saveZones() {
+		rxService.saveZones();
 	}
 
 }
@@ -25,10 +25,10 @@ rxService.$inject = [];
 function rxService() {
 	var service = this;
 
-	service.test = test;
+	service.saveZones = saveZones;
 
-	function test() {
-		console.log("works");
+	function saveZones() {
+		console.log("saving zones");
 	}
 
 
