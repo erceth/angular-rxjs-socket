@@ -11,8 +11,17 @@
 </head>
 
 <body>
-    <div class="main">
-		<button class="button" ng-click="MainCtrl.saveZones()">Click me!</button>
+    <div class="main rows">
+    	<div class="col-xs-6">
+    		<div ng-repeat="p in MainCtrl.panels track by $index">
+	    		<panel id="$index"></panel> <button ng-click="MainCtrl.deletePanel($index);">delete</button>
+	    	</div>
+    	</div>
+    	
+    	<div class="col-xs-6">
+    		<button class="btn" ng-click="MainCtrl.addPanel()">Add Panel</button>
+    		<button class='btn' ng-click='MainCtrl.saveZones()'>Save zones</button>	
+    	</div>
     </div>
 </body>
 

@@ -11,14 +11,13 @@ io.on("connection", function(socket) {
 	socket.emit("init", {asdf:"asdf"});
 	
 	socket.on("save-zones", function(data) {
-		setTimeout(function() {
-			io.emit("new-zones", {body: "new zones"});
-		}, 1000);
+		for(var i = 0; i < 20; i++) {
+			var num = 0;
+			setTimeout(function() {
+				io.emit("new-zones", {body: num++});
+			}, 1000 * i);	
+		}
 	});
-
-	socket.on("disconnect", function(data) {
-		console.log("user disconnect");
-	})
 
 });
 
